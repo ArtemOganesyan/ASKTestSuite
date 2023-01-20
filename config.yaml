@@ -1,0 +1,9 @@
+Database:
+  db_name: "application"
+  db_host: "44.205.92.189"
+  db_user: "testuser"
+  db_pass: "password"
+  db_port: "3307"
+
+API:
+  base_url: "http://ask-stage.portnov.com/api/v1"
