@@ -3,8 +3,13 @@ Database:
   db_host: "44.205.92.189"
   db_user: "testuser"
   db_pass: "password"
-  db_port: "3307"
+  db_port: "3308"
 
 API:
-  base_url: "http://ask-stage.portnov.com/api/v1"
+  base_url: "http://ask-qa.portnov.com/api/v1"
 
+TEST_USERS:
+  teacher_email: "aliya15@cggup.com"
+  teacher_password: "Freeman23"
+  student_email: "baxend@kitchen-tvs.ru"
+  student_password: "StudentWhite23"

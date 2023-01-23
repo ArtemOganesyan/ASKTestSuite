@@ -1,9 +1,12 @@
+import pytest
+import config
 import json
 import requests as requests
-import config
 
 
-def sign_in():
+#  fixture script executes API sign in call and returns response object to test method
+@pytest.fixture
+def setup():
     url = f"{config.get()['API']['base_url']}/sign-in"
     payload = json.dumps({
         "email": config.get()["TEST_USERS"]["teacher_email"],

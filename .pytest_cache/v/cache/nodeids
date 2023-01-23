@@ -1,0 +1,6 @@
+[
+  "tests/test_ask.py::TestQuiz::test_api_db_quiz_create",
+  "tests/test_ask.py::TestQuiz::test_api_db_quiz_get",
+  "tests/test_ask.py::TestSample::test_api_registration",
+  "tests/test_ask.py::TestSample::test_db_user_exist"
+]
