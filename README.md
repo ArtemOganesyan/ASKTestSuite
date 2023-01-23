@@ -8,6 +8,7 @@ External packages:
 
 Useful links:
 
+* [ASK API documentation](http://ask.portnov.com/api-doc/#/)
 * [pytest documentation](https://docs.pytest.org/en/7.2.x/)
 * [requests documentation](https://pypi.org/project/requests/)
 * [mysql-connector-python documentation](https://pypi.org/project/mysql-connector-python/)
