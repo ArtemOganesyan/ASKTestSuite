@@ -32,4 +32,16 @@ def create_quiz(token):
     return response
 
 
-# token = sign_in.sign_in().json().get("token")
+def get_quizzes(token):
+    url = f"{config.get()['API']['base_url']}/quizzes"
+    headers = {
+        'Authorization': f'Bearer {token}'  # call sign in function to sign in
+        # with teacher permissions and get authorisation token
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    return response
+
+
+
+
