@@ -118,7 +118,7 @@ class RegistrationFormEmail:
 
     # 459 should contain @ sign separating domain from local port
     negative10 = {"test_data":
-                     {"email": " student11gmail.com",
+                     {"email": "student11gmail.com",
                       "password": "12345",
                       "name": "Student Eleven",
                       "group": "CAB"},
