@@ -4,7 +4,7 @@ import json
 import requests as requests
 
 
-#  fixture script executes API sign in call and returns response object to test method
+#  fixture script executes API sign in call for TEACHER user and returns response object to test method
 @pytest.fixture
 def setup():
     url = f"{config.get()['API']['base_url']}/sign-in"

@@ -3,16 +3,15 @@ import requests as requests
 import config
 
 
-def sign_in():
+def sign_in(email, password):
     url = f"{config.get()['API']['base_url']}/sign-in"
-    payload = json.dumps({
-        "email": config.get()["TEST_USERS"]["teacher_email"],
-        "password": config.get()["TEST_USERS"]["teacher_password"],
-    })
+    payload = json.dumps({"email": email,
+                          "password": password
+                          })
     headers = {
         'Content-Type': 'application/json'
     }
-
     response = requests.request("POST", url, headers=headers, data=payload)
     return response
+
 

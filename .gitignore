@@ -187,3 +187,4 @@ fabric.properties
 # manually added items
 .log
 .sample
+.html
