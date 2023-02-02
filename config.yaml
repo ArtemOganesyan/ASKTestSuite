@@ -8,8 +8,17 @@ Database:
 API:
   base_url: "http://ask-qa.portnov.com/api/v1"
 
+WEB:
+  base_url: "http://ask-qa.portnov.com/"
+
+MOCK_SERVICE:
+  hostName: "0.0.0.0"
+  serverPort: 8887
+
+
 TEST_USERS:
   teacher_email: "aliya15@cggup.com"
   teacher_password: "Freeman23"
   student_email: "baxend@kitchen-tvs.ru"
   student_password: "StudentWhite23"
+

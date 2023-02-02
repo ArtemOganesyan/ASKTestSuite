@@ -1,0 +1,123 @@
+{
+  "TestRegistrationEmail":
+  {
+    "positive1":
+    {
+      "email": "aA1!@gmail.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative1":
+    {
+      "email": "",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "positive2":
+    {
+      "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative2":
+    {
+      "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative3":
+    {
+      "email": "student11 @gmail.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative4":
+    {
+      "email": "student11@ gmail.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative5":
+    {
+      "email": "student11@gmail. com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "positive3": {
+      "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative6":
+    {
+      "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "positive4": {
+      "email": "student11@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative7":
+    {
+      "email": "student11@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "positive5":
+    {
+      "email": "student11@gmail.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative8":
+    {
+      "email": "student11@gmail.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative9":
+    {
+      "email": "student11@gmailcom",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    },
+    "negative10":
+    {
+      "email": "student11gmail.com",
+      "password": "12345",
+      "name": "Student Eleven",
+      "group": "CAB"
+    }
+  },
+  "TestE2E":
+  {
+    "student_regi_activ_sign_in":
+    {
+      "email": "apitestmonster7@gmail.com",
+      "password": "011235813",
+      "name": "Ivan",
+      "group": "API_Test"
+    }
+  }
+}
+
+
+
+
+

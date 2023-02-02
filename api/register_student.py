@@ -1,7 +1,6 @@
 import json
 import requests as requests
 import config
-from tests.test_data.registration_form import RegistrationFormEmail
 
 
 def register_student_account(test_data):
