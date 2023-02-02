@@ -15,10 +15,10 @@ class TestSignIn:
     def test_sign_in_teacher_positive(self, setup):
         self.logger.debug("invoking browser")
         driver = setup
-        # this will create object with attributes being instances of all application pages
+        # this  creates object with attributes being instances of all application pages
         page = CommonPage(driver)
         self.logger.debug("getting test data")
-        # this will get test data from json file based on test type, test suit, test case
+        # this gets test data from json file based on test type, test suit, test case
         test_data = get_test_data('web', 'TestSignIn', 'sign_in_teacher_positive')
 
         self.logger.debug(f"navigating to url: {config.get()['WEB']['base_url']}{page.sign_in_page.page_url}")

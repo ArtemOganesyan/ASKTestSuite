@@ -25,11 +25,11 @@ def setup(request):
         driver.maximize_window()
         return driver
 
-        # elif browser_name == 'safari':
-        #
-        #     driver = webdriver.Safari(options=SafariOptions())
-        #     driver.maximize_window()
-        #     return driver
+    elif browser_name == 'safari':
+
+        driver = webdriver.Safari(options=SafariOptions())
+        driver.maximize_window()
+        return driver
 
     else:
         error_message = 'browser name error or browser is not supported'
