@@ -185,6 +185,6 @@ fabric.properties
 .idea
 
 # manually added items
-.log
-.sample
+.logs/*.log
+sample.py
 .html
