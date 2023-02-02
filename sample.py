@@ -12,12 +12,58 @@ json with test data, conftest.py for browser invoking
 9. Config.yaml updated: mock-service configurations are added
 
 ? waits
-? browser stack
 ? git ignore
 
 2 DO:
 
 safari fix
 firefox teardown
+
+/// git reset --hard
+
+*** Browser Stack ****
+
+https://automate.browserstack.com/dashboard/v2/quick-start/setup-browserstack-sdk
+
+1
+
+# Set these values in your ~/.zprofile (zsh) or ~/.profile (bash)
+export BROWSERSTACK_USERNAME="artkrylov_HOnNub"
+export BROWSERSTACK_ACCESS_KEY="7jkViUM3qqpKcsPRRoos"
+
+2
+
+# install BrowserStack SDK
+python3 -m pip install browserstack-sdk
+# create browserstack.yml config file
+browserstack-sdk setup --framework "pytest" --username "artkrylov_HOnNub" --key "7jkViUM3qqpKcsPRRoos"
+
+3 browserstack.yml
+
+userName: artkrylov_HOnNub
+accessKey: 7jkViUM3qqpKcsPRRoos
+platforms:
+  - os: OS X
+    osVersion: Ventura
+    browserName: Chrome
+    browserVersion: latest
+  - os: Windows
+    osVersion: 11
+    browserName: Edge
+    browserVersion: latest-beta
+  - os: OS X
+    osVersion: Big Sur
+    browserName: Chrome
+    browserVersion: 90.0
+browserstackLocal: true
+buildName: ASK 1.0.7
+buildIdentifier: ${BUILD_NUMBER}
+projectName: BrowserStack Sample
+debug: true
+networkLogs: true
+consoleLogs: info
+framework: pytest
+
+4 browserstack-sdk pytest <path-to-test-files>
 
 """

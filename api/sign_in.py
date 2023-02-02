@@ -14,4 +14,3 @@ def sign_in(email, password):
     response = requests.request("POST", url, headers=headers, data=payload)
     return response
 
-

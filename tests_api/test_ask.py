@@ -184,7 +184,7 @@ class TestE2E:
         self.logger.debug("asserting status code 200")
         assert response.status_code == 200
         self.logger.debug("deleting user")
-        response= delete_account(test_data['email'], setup.json()['token'])
+        response = delete_account(test_data['email'], setup.json()['token'])
         if response.status_code == 200:
             self.logger.debug("user deleted")
         else:
