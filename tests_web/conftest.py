@@ -18,23 +18,27 @@ def setup(request):
     if browser_name == 'chrome':
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
-        return driver
+        yield driver
 
     elif browser_name == 'firefox':
         driver = webdriver.Firefox(service=GeckoService(GeckoDriverManager().install()))
         driver.maximize_window()
-        return driver
+        yield driver
+        driver.quit()
 
     elif browser_name == 'safari':
 
         driver = webdriver.Safari(options=SafariOptions())
         driver.maximize_window()
-        return driver
+        yield driver
+
 
     else:
         error_message = 'browser name error or browser is not supported'
         logger.error(error_message)
         raise ValueError(error_message)
+
+
 
 
 #  this function adds cross-browser functionality

@@ -1,0 +1,34 @@
+{
+  "TeslaHomePage":
+  {
+    "iPhone14":
+    {
+      "w": 390,
+      "h": 844,
+      "type": "mob"
+    },
+    "iPadPro12.9":
+    {
+      "w": 1024,
+      "h": 1366,
+      "type": "tab"
+
+    },
+
+    "MacAir2":
+    {
+      "w": 2560,
+      "h": 1664,
+      "type": "desk"
+
+    },
+
+    "iMac24":
+    {
+      "w": 4480,
+      "h": 2520,
+      "type": "desktop"
+    }
+
+  }
+}
