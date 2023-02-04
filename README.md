@@ -8,6 +8,7 @@ External packages:
 5. selenium (WEB)
 6. webdriver-manager(WEB)
 7. pytest-xdist (WEB)
+8. pytest-selenium(Browserstack integration)
 
 Useful links:
 
@@ -18,6 +19,10 @@ Useful links:
 * [selenium documentation](https://pypi.org/project/selenium/)
 * [webdriver-manager documentation](https://pypi.org/project/webdriver-manager/)
 * [pytest-xdist](https://pypi.org/project/pytest-xdist/)
+* [pytest-selenium](https://pypi.org/project/pytest-selenium/)
+* [browserstack](https://automate.browserstack.com/dashboard/v2/quick-start/setup-browserstack-sdk)
+
+
 
 
 
@@ -32,4 +37,8 @@ CLI options for cross-browser execution:
 * --browser chrome
 * --browser firefox
 * default browser is crome
+
+CLI options for browser-stack execution:
+* browserstack-sdk pytest tests_web/test_sign_in.py
+* make sure browserstackLocal option is set to  'false' in browserstack.yaml
 

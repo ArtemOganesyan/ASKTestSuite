@@ -15,7 +15,6 @@ class TestSignIn:
     def test_sign_in_teacher_positive(self, setup):
         self.logger.debug("invoking browser")
         driver = setup
-        # this  creates object with attributes being instances of all application pages
         page = CommonPage(driver)
         self.logger.debug("getting test data")
         # this gets test data from json file based on test type, test suit, test case

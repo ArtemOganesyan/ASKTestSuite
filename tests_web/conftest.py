@@ -19,6 +19,8 @@ def setup(request):
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
         yield driver
+        driver.quit()
+
 
     elif browser_name == 'firefox':
         driver = webdriver.Firefox(service=GeckoService(GeckoDriverManager().install()))
@@ -31,6 +33,8 @@ def setup(request):
         driver = webdriver.Safari(options=SafariOptions())
         driver.maximize_window()
         yield driver
+        driver.quit()
+
 
 
     else:

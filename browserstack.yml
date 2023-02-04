@@ -1,0 +1,16 @@
+userName: artkrylov_HOnNub
+accessKey: 7jkViUM3qqpKcsPRRoos
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: Edge
+    browserVersion: latest
+browserstackLocal: false
+buildName: bstack-demo
+buildIdentifier: ${BUILD_NUMBER}
+projectName: BrowserStack Sample
+debug: true
+networkLogs: true
+consoleLogs: info
+framework: pytest
+acceptInsecureCerts: true
