@@ -23,22 +23,22 @@ Useful links:
 * [browserstack](https://automate.browserstack.com/dashboard/v2/quick-start/setup-browserstack-sdk)
 
 
-
-
-
 Configuration:
 * config.yaml
+* browserstack.yml
 
 CLI options for parallel execution:
 * -n=auto (to execute all tests collected)
-* -n=<number of tests to be executed>
+* -n= number of tests to be executed
 
 CLI options for cross-browser execution:
 * --browser chrome
 * --browser firefox
-* default browser is crome
+* default browser is chrome
 
 CLI options for browser-stack execution:
-* browserstack-sdk pytest tests_web/test_sign_in.py
-* make sure browserstackLocal option is set to  'false' in browserstack.yaml
+* note: please read official documentation to set environment variables 
+* note: make sure browserstackLocal option is set to  'false' in browserstack.yaml
+* browserstack-sdk pytest /path to test
+
 
