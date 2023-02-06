@@ -27,7 +27,21 @@
     {
       "w": 4480,
       "h": 2520,
-      "type": "desktop"
+      "type": "desk"
+    },
+
+    "BoundaryHigh":
+    {
+      "w": 1200,
+      "h": 972,
+      "type": "desk"
+    },
+
+    "BoundaryLow":
+    {
+      "w": 1119,
+      "h": 914,
+      "type": "tab"
     }
 
   }

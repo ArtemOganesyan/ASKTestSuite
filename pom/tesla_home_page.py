@@ -11,16 +11,16 @@ class HomePage:
     top_line_offer = [(By.CSS_SELECTOR, ".tcl-simple-banner"), 'desk_tab_mob']
     top_line_offer_learn_more_link = [(By.CSS_SELECTOR, "a[href='/support/incentives']"), 'desk_tab_mob']
 
-    # footer
+    # header
     footer_logo = [(By.CSS_SELECTOR, ".tds-icon-logo-wordmark"), 'desk_tab_mob']
-    footer_model_s_link = [(By.CSS_SELECTOR, "a[title= 'Model S']"), 'desk']  # n/a mob
-    footer_model_3_link = [(By.CSS_SELECTOR, "a[title= 'Model 3']"), 'desk']  # n/a mob
-    footer_model_Y_link = [(By.CSS_SELECTOR, "a[title= 'Model Y']"), 'desk']  # n/a mob
-    footer_model_X_link = [(By.CSS_SELECTOR, "a[title= 'Model X']"), 'desk']  # n/a mob
-    footer_Roof_link = [(By.CSS_SELECTOR, "a[title = 'Solar Roof']"), 'desk']  # n/a mob
-    footer_Panels_link = [(By.CSS_SELECTOR, "a[title = 'Solar Panels']"), 'desk']  # n/a mob
-    footer_shop_link = [(By.CSS_SELECTOR, "a[title = 'Shop']"), 'desk']  # n/a mob
-    footer_account_link = [(By.CSS_SELECTOR, "a[title = 'Account']"), 'desk']  # n/a mob
+    footer_model_s_link = [(By.CSS_SELECTOR, "a[title= 'Model S']"), 'desk']
+    footer_model_3_link = [(By.CSS_SELECTOR, "a[title= 'Model 3']"), 'desk']
+    footer_model_Y_link = [(By.CSS_SELECTOR, "a[title= 'Model Y']"), 'desk']
+    footer_model_X_link = [(By.CSS_SELECTOR, "a[title= 'Model X']"), 'desk']
+    footer_Roof_link = [(By.CSS_SELECTOR, "a[title = 'Solar Roof']"), 'desk']
+    footer_Panels_link = [(By.CSS_SELECTOR, "a[title = 'Solar Panels']"), 'desk']
+    footer_shop_link = [(By.CSS_SELECTOR, "a[title = 'Shop']"), 'desk']
+    footer_account_link = [(By.CSS_SELECTOR, "a[title = 'Account']"), 'desk']
     footer_menu_button = [(By.CSS_SELECTOR, "button[title = 'Menu']"), 'desk_tab_mob']
 
     # model 3 screen

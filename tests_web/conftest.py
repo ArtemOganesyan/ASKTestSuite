@@ -15,10 +15,12 @@ from selenium.webdriver.safari.options import Options as SafariOptions
 def setup(request):
     logger = get_logger()
     browser_name = request.config.getoption("browser")
+    logger.debug(f"invoking browser {browser_name}")
     if browser_name == 'chrome':
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
         yield driver
+        driver.quit()
 
     elif browser_name == 'firefox':
         driver = webdriver.Firefox(service=GeckoService(GeckoDriverManager().install()))
@@ -31,7 +33,7 @@ def setup(request):
         driver = webdriver.Safari(options=SafariOptions())
         driver.maximize_window()
         yield driver
-
+        driver.quit()
 
     else:
         error_message = 'browser name error or browser is not supported'
