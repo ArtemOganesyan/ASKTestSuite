@@ -31,5 +31,5 @@ CLI options for parallel execution:
 CLI options for cross-browser execution:
 * --browser chrome
 * --browser firefox
-* default browser is crome
+* default browser is chrome
 

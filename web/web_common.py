@@ -29,3 +29,11 @@ class WebCommonMethods:
         wait = WebDriverWait(driver, timeout)
         wait.until(ec.visibility_of_element_located(locator))
 
+    # @staticmethod
+    # def get_screenshot(driver, test_name):
+    #     driver.save_screenshot(f"../screenshots/{test_name}_screenshot.png")
+
+    @staticmethod
+    # this function will return boolean
+    def is_displayed(element):
+        return element.is_displayed()

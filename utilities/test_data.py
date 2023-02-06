@@ -17,6 +17,9 @@ def get_test_data(test_type, test_suit, case_name):
     elif test_type == 'web':
         jsonfile = open('./test-data/web_test_data.json')
 
+    elif test_type == 'responsive':
+        jsonfile = open('./test-data/responsive_ui.json')
+
     data = json.load(jsonfile)
     return data[test_suit][case_name]
     jsonfile.close
