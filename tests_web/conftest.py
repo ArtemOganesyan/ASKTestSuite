@@ -1,4 +1,6 @@
 import pytest
+from selenium.webdriver import DesiredCapabilities
+
 import config
 import json
 import requests as requests
@@ -17,13 +19,20 @@ def setup(request):
     browser_name = request.config.getoption("browser")
     logger.debug(f"invoking browser {browser_name}")
     if browser_name == 'chrome':
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        # enabling browser console log
+        dc = DesiredCapabilities.CHROME
+        dc['loggingPrefs'] = {'browser': 'ALL'}
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), desired_capabilities=dc)
+
         driver.maximize_window()
         yield driver
         driver.quit()
 
     elif browser_name == 'firefox':
-        driver = webdriver.Firefox(service=GeckoService(GeckoDriverManager().install()))
+        # browser logs now working for firefox
+        dc = DesiredCapabilities.FIREFOX
+        dc['loggingPrefs'] = {'browser': 'ALL'}
+        driver = webdriver.Firefox(service=GeckoService(GeckoDriverManager().install()), desired_capabilities=dc)
         driver.maximize_window()
         yield driver
         driver.quit()
@@ -39,8 +48,6 @@ def setup(request):
         error_message = 'browser name error or browser is not supported'
         logger.error(error_message)
         raise ValueError(error_message)
-
-
 
 
 #  this function adds cross-browser functionality

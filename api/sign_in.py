@@ -15,4 +15,5 @@ def sign_in(email, password):
     return response
 
 
-sign_in('student1@gmail.com','student12345')
+response = sign_in('student1@gmail.com','student12345')
+print(response.elapsed.total_seconds()*1000)

@@ -26,7 +26,7 @@ Configuration:
 
 CLI options for parallel execution:
 * -n=auto (to execute all tests collected)
-* -n=<number of tests to be executed>
+* -n=<number of tests to be execute>
 
 CLI options for cross-browser execution:
 * --browser chrome

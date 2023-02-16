@@ -1,6 +1,7 @@
 import pytest
 
 import config
+from web.web_common import WebCommonMethods
 from utilities import logger
 from utilities.test_data import get_test_data
 from pom.common_page import CommonPage
@@ -9,6 +10,22 @@ from pom.common_page import CommonPage
 # this test suit verifies login form functionality for teacher and student users
 class TestSignIn:
     logger = logger.get_logger()
+
+    # loads page with console log events but not SEVERE
+    @pytest.mark.console_p
+    def test_console_log_positive(self, setup):
+        driver = setup
+        driver.get("https://pepsi.com")
+        self.logger.debug("asserting browser console log")
+        assert WebCommonMethods.b_log_checker(driver.get_log('browser'))
+
+    # loads page with console log events SEVERE
+    @pytest.mark.console_n
+    def test_console_log_negative(self, setup):
+        driver = setup
+        driver.get("http://foo.com")
+        self.logger.debug("asserting browser console log")
+        assert WebCommonMethods.b_log_checker(driver.get_log('browser'))
 
     #  teacher sign in with valid credentials
     @pytest.mark.positive
@@ -38,6 +55,9 @@ class TestSignIn:
         assert actual_user_role == 'TEACHER'
         self.logger.debug("asserting user name")
         assert actual_user_name == 'Professor Freeman'
+
+        self.logger.debug("asserting browser console log")
+        assert WebCommonMethods.b_log_checker(driver.get_log('browser'))
 
     #  teacher sign in with invalid credentials
     def test_sign_in_teacher_negative(self, setup):
@@ -114,3 +134,5 @@ class TestSignIn:
 
         self.logger.debug("asserting user is not logged in")
         assert page.sign_in_page.page_url in driver.current_url
+
+
