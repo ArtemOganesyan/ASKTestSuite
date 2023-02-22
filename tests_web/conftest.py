@@ -25,8 +25,10 @@ def setup(request):
     logger.debug(f"invoking browser {browser_name} in {browser_mode} mode")
     if browser_name == 'chrome':
         options = ChromeOptions()
+
         if browser_mode == 'headless':
             options.headless = True
+            options.add_argument('--no-sandbox')
         else:
             options.headless = False
 
@@ -44,8 +46,11 @@ def setup(request):
 
     elif browser_name == 'firefox':
         options = GeckoOptions()
+
         if browser_mode == 'headless':
             options.headless = True
+            options.add_argument('--no-sandbox')
+
         else:
             options.headless = False
 
