@@ -28,8 +28,11 @@ CLI options for parallel execution:
 * -n=auto (to execute all tests collected)
 * -n=<number of tests to be execute>
 
-CLI options for cross-browser execution:
+CLI options :
 * --browser chrome
 * --browser firefox
 * default browser is chrome
+* --mode headless
+* default browser mode is regular (ui) 
+
 

@@ -9,7 +9,7 @@ class TestSignIn:
     logger = logger.get_logger()
 
     #  this test checks visibility of all web elements in different screen resolutions
-    @pytest.mark.test
+    @pytest.mark.tesla
     def test_tesla_home_page_mac_air2(self, setup):
         driver = setup
         # this  creates object with attributes being instances of all application pages
@@ -41,6 +41,7 @@ class TestSignIn:
         else:
             assert True
 
+    @pytest.mark.tesla
     def test_tesla_home_page_iphone14(self, setup):
         driver = setup
         # this  creates object with attributes being instances of all application pages
@@ -72,6 +73,7 @@ class TestSignIn:
         else:
             assert True
 
+    @pytest.mark.tesla
     def test_tesla_home_page_imac24(self, setup):
         driver = setup
         # this  creates object with attributes being instances of all application pages
@@ -103,6 +105,7 @@ class TestSignIn:
         else:
             assert True
 
+    @pytest.mark.tesla
     def test_tesla_home_page_ipad_pro_12_9(self, setup):
         driver = setup
         # this  creates object with attributes being instances of all application pages
@@ -135,7 +138,7 @@ class TestSignIn:
             assert True
 
     # this tests asserts on high boundary w 1200 all desktop elements are visible
-    @pytest.mark.boundary
+    @pytest.mark.tesla
     def test_tesla_home_page_boundary_high(self, setup):
         driver = setup
         # this  creates object with attributes being instances of all application pages
@@ -168,7 +171,7 @@ class TestSignIn:
             assert True
 
     # this tests asserts on low boundary w 1119 all mobile elements are visible
-    @pytest.mark.boundary
+    @pytest.mark.tesla
     def test_tesla_home_page_boundary_low(self, setup):
         driver = setup
         # this  creates object with attributes being instances of all application pages

@@ -1,3 +1,5 @@
+import os
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -53,3 +55,11 @@ class WebCommonMethods:
             pass
 
         return result
+
+    @staticmethod
+    def take_screen_shot(test_name, driver):
+        if not os.path.exists("./screenshots"):
+            os.makedirs("./screenshots")
+
+        driver.save_screenshot(f"./screenshots/{test_name}.png")
+        driver.quit()

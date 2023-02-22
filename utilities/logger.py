@@ -1,8 +1,12 @@
 import inspect
 import logging
+import os
 
 
 def get_logger():
+    if not os.path.exists("./logs"):
+        os.makedirs("./logs")
+
     logger_name = inspect.stack()[1][3]
     logger = logging.getLogger(logger_name)
     file_handler = logging.FileHandler('./logs/logfile.log')
