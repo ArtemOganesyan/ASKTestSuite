@@ -1,11 +1,9 @@
 import pytest
-
 import config
-from web.web_common import WebCommonMethods
+from web.web_common import WebCommonMethods as WC
 from utilities import logger
 from utilities.test_data import get_test_data
 from pom.common_page import CommonPage
-
 
 # this test suit verifies login form functionality for teacher and student users
 class TestSignIn:
@@ -14,6 +12,10 @@ class TestSignIn:
     #  teacher sign in with valid credentials
     @pytest.mark.ask
     def test_sign_in_teacher_positive(self, setup):
+        """
+        teacher user sign in with valid credentials
+
+        """
         driver = setup[0]
         browser = setup[1]
 
@@ -43,11 +45,15 @@ class TestSignIn:
         self.logger.debug(f"{browser} : test_sign_in_teacher_positive : asserting user role")
         assert actual_user_role == 'TEACHER'
         self.logger.debug(f"{browser} : test_sign_in_teacher_positive : asserting user name")
-        assert actual_user_name == 'Professor Freeman'
+        assert actual_user_name == 'Professor Freema', WC.take_screen_shot('teacher_positive', driver)
 
     #  teacher sign in with invalid credentials
     @pytest.mark.ask
     def test_sign_in_teacher_negative(self, setup):
+        """
+        student user sign in with invalid credentials
+
+        """
         driver = setup[0]
         browser = setup[1]
         page = CommonPage(driver)
@@ -75,6 +81,10 @@ class TestSignIn:
     #  student sign in with valid credentials
     @pytest.mark.ask
     def test_sign_in_student_positive(self, setup):
+        """
+        student user sign in with positive credentials
+
+        """
         driver = setup[0]
         browser = setup[1]
         page = CommonPage(driver)
@@ -103,6 +113,11 @@ class TestSignIn:
     #  student sign in with invalid credentials
     @pytest.mark.ask
     def test_sign_in_student_negative(self, setup):
+        """
+        student user sign in with negative credentials
+
+        """
+
         driver = setup[0]
         browser = setup[1]
         page = CommonPage(driver)

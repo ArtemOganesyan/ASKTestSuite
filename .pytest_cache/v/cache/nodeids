@@ -40,6 +40,8 @@
   "tests_api/test_ask.py::TestRegistrationEmail::test_max_char_128",
   "tests_api/test_ask.py::TestRegistrationEmail::test_max_char_129",
   "tests_api/test_ask.py::TestRegistrationEmail::test_tld_separated_dot",
+  "tests_web/test_sign_in.py::TestSignIn::test_console_log_negative",
+  "tests_web/test_sign_in.py::TestSignIn::test_console_log_positive",
   "tests_web/test_sign_in.py::TestSignIn::test_sign_in_student_negative",
   "tests_web/test_sign_in.py::TestSignIn::test_sign_in_student_positive",
   "tests_web/test_sign_in.py::TestSignIn::test_sign_in_teacher_negative",
@@ -47,5 +49,11 @@
   "tests_web/test_sign_in.py::TestSignIn::test_sing_in_student_negative",
   "tests_web/test_sign_in.py::TestSignIn::test_sing_in_student_positive",
   "tests_web/test_sign_in.py::TestSignIn::test_sing_in_teacher_negative",
-  "tests_web/test_sign_in.py::TestSignIn::test_sing_in_teacher_positive"
+  "tests_web/test_sign_in.py::TestSignIn::test_sing_in_teacher_positive",
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_boundary_high",
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_boundary_low",
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_imac24",
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_ipad_pro_12_9",
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_iphone14",
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_mac_air2"
 ]

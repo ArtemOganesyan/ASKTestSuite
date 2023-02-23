@@ -1,10 +1,14 @@
 import os
-
+import allure
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from utilities.logger import get_logger
+from allure_commons.types import AttachmentType
+import allure
+
+
 
 # this class contains common webdriver methods that can be reused in POM action methods
 class WebCommonMethods:
@@ -61,5 +65,9 @@ class WebCommonMethods:
         if not os.path.exists("./screenshots"):
             os.makedirs("./screenshots")
 
-        driver.save_screenshot(f"./screenshots/{test_name}.png")
+        # driver.save_screenshot(f"./screenshots/{test_name}.png")
+        allure.attach(driver.get_screenshot_as_png(), name=f"{test_name}", attachment_type=AttachmentType.PNG)
         driver.quit()
+
+
+

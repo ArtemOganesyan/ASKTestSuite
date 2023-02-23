@@ -1,6 +1,9 @@
 {
   "tests/test_ask.py::TestQuiz::test_api_db_quiz_get": true,
-  "tests/test_ask.py::TestSample::test_db_user_exist": true,
   "tests/test_ask.py::TestSample::test_api_registration": true,
-  "tests_web/test_sign_in.py::TestSignIn::test_sing_in_teacher_negative": true
+  "tests/test_ask.py::TestSample::test_db_user_exist": true,
+  "tests_web/test_sign_in.py::TestSignIn::test_sign_in_teacher_positive": true,
+  "tests_web/test_sign_in.py::TestSignIn::test_sing_in_teacher_negative": true,
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_boundary_low": true,
+  "tests_web/test_tesla_homepage.py::TestSignIn::test_tesla_home_page_ipad_pro_12_9": true
 }
