@@ -187,4 +187,6 @@ fabric.properties
 # manually added items
 .logs/*.log
 sample.py
-.html
+.html/
+.allure/*
+.allure/*

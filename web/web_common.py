@@ -1,7 +1,13 @@
+import os
+import allure
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
+from utilities.logger import get_logger
+from allure_commons.types import AttachmentType
+import allure
+
 
 
 # this class contains common webdriver methods that can be reused in POM action methods
@@ -34,6 +40,34 @@ class WebCommonMethods:
     #     driver.save_screenshot(f"../screenshots/{test_name}_screenshot.png")
 
     @staticmethod
-    # this function will return boolean
+    # this method will return boolean
     def is_displayed(element):
         return element.is_displayed()
+
+    # this method logs console errors and returns check results
+    @staticmethod
+    def b_log_checker(log):
+        logger = get_logger()
+        result = True
+        # try/except to continue in case log is an empty list
+        try:
+            for el in log:
+                if el['level'] == 'SEVERE':
+                    logger.error(f'Browser Console Error: {el}')
+                    result = False
+        except:
+            pass
+
+        return result
+
+    @staticmethod
+    def take_screen_shot(test_name, driver):
+        if not os.path.exists("./screenshots"):
+            os.makedirs("./screenshots")
+
+        # driver.save_screenshot(f"./screenshots/{test_name}.png")
+        allure.attach(driver.get_screenshot_as_png(), name=f"{test_name}", attachment_type=AttachmentType.PNG)
+        driver.quit()
+
+
+
