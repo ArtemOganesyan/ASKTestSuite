@@ -39,4 +39,4 @@ CLI options for generating allure reports
 * pytest --alluredir allure test.py
 * allure serve allure
 
-THIS IS THE END
+* --lf - to rerun failing tests

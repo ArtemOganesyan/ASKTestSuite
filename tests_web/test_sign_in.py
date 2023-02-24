@@ -44,7 +44,7 @@ class TestWebSignIn:
         self.logger.debug(f"{browser} : test_sign_in_teacher_positive : asserting user role")
         assert actual_user_role == 'TEACHER'
         self.logger.debug(f"{browser} : test_sign_in_teacher_positive : asserting user name")
-        assert actual_user_name == 'Professor Freema', WC.take_screen_shot('teacher_positive', driver)
+        assert actual_user_name == 'Professor Freeman', WC.take_screen_shot('teacher_positive', driver)
 
     #  teacher sign in with invalid credentials
     @pytest.mark.regression
